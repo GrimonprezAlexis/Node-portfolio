@@ -4,7 +4,7 @@ const projectSchema = new mongoose.Schema({
 	_id: mongoose.Schema.Types.ObjectId,
 	title: String,
 	subtitle: String,
-	technologies: String,
+	technologies: Array,
 	description: String,
 	links: Object,
 	imageUrl: String

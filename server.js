@@ -10,6 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(cors({
     origin: function(origin, callback) {
         const allowOrigin = [
+            'http://localhost:4200',
             'http://www.alexgrz.vercel.app',
             'https://www.alexgrz.vercel.app'
         ];
