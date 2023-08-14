@@ -21,6 +21,8 @@ app.use(cors({
 
 // Middleware for logging
 app.use(require('./middleware/logger'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Connect to MongoDB using mongoose
 mongoose.connect('mongodb://localhost:27017/portfolio', {

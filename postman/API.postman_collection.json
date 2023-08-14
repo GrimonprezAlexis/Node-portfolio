@@ -1,0 +1,510 @@
+{
+	"info": {
+		"_postman_id": "2eca3fee-6caa-47bd-943e-da928f26a0ae",
+		"name": "Projects API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28223928"
+	},
+	"item": [
+		{
+			"name": "Get All Projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"projects"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Projects",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"projects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5345"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"14e1-RKYD613IW5z2KbgSj6aOejGnEhM\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Aug 2023 17:29:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"64d805e9f0844e9ab060eba2\",\n            \"title\": \"Projet 2 - Transformez une maquette en site web\",\n            \"subtitle\": \"Réservia - Outil de planification de vacances\",\n            \"technologies\": \"HTML, CSS, Font Awesome, Github\",\n            \"description\": \"Responsive website based on a provided design.\",\n            \"links\": {\n                \"repository\": \"https://github.com/GrimonprezAlexis/GrimonprezAlexis_2_06022021\",\n                \"maquette\": \"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P2+HTML+%26+CSS/Projet+2+-+Reservia+FR.zip\"\n            }\n        },\n        {\n            \"_id\": \"64d805e9f0844e9ab060eba3\",\n            \"title\": \"Projet 3 - Dynamisez une page web avec des animations CSS\",\n            \"subtitle\": \"Ohmyfood - Entreprise de commande de repas en ligne\",\n            \"technologies\": \"HTML, CSS, SASS, Font Awesome, Github\",\n            \"description\": \"Create a mobile-responsive website with animations.\",\n            \"links\": {\n                \"repository\": \"https://github.com/your-repo-link\",\n                \"maquette\": \"https://your-maquette-link\"\n            }\n        },\n        {\n            \"_id\": \"64d805e9f0844e9ab060eba4\",\n            \"title\": \"Projet 4 - Créez une landing page avec Javascript\",\n            \"subtitle\": \"GameOn - Conférences et concours de jeux\",\n            \"technologies\": \"HTML, CSS, Javascript, Github\",\n            \"description\": \"Implement JavaScript functionality for a landing page.\",\n            \"links\": {\n                \"repository\": \"https://github.com/your-repo-link\",\n                \"maquette\": \"https://your-maquette-link\"\n            }\n        },\n        {\n            \"_id\": \"64d805e9f0844e9ab060eba5\",\n            \"title\": \"Projet 6 - Créez un site accessible pour une plateforme de photographes\",\n            \"subtitle\": \"FishEye - Présentation des travaux de photographes\",\n            \"technologies\": \"HTML, CSS, Javascript, Github\",\n            \"description\": \"Develop an accessible website to showcase photographers' work.\",\n            \"links\": {\n                \"repository\": \"https://github.com/your-repo-link\",\n                \"maquette\": \"https://your-maquette-link\"\n            }\n        },\n        {\n            \"_id\": \"64d805e9f0844e9ab060eba6\",\n            \"title\": \"Projet 7 - Développez un algorithme de recherche en JavaScript\",\n            \"subtitle\": \"Les petits plats - Site web de recettes de cuisine\",\n            \"technologies\": \"HTML, CSS, SASS, Bootstrap 4, Javascript\",\n            \"description\": \"Build a functional cooking recipe website with search algorithm.\",\n            \"links\": {\n                \"repository\": \"https://github.com/your-repo-link\",\n                \"maquette\": \"https://your-maquette-link\"\n            }\n        },\n        {\n            \"_id\": \"64d805e9f0844e9ab060eba7\",\n            \"title\": \"Projet 10 - Définissez les besoins pour une app de soutien scolaire\",\n            \"subtitle\": \"Learn@Home - Soutien scolaire en ligne\",\n            \"technologies\": \"Figma or Sketch\",\n            \"description\": \"Define requirements and create UI/UX design for an online tutoring app.\",\n            \"links\": {\n                \"repository\": \"https://github.com/your-repo-link\",\n                \"maquette\": \"https://your-maquette-link\"\n            }\n        },\n        {\n            \"_id\": \"64d805e9f0844e9ab060eba8\",\n            \"title\": \"Projet 11 - Développez une application Web avec React et React Router\",\n            \"subtitle\": \"Kasa - Location d'appartements entre particuliers\",\n            \"technologies\": \"HTML, CSS, SASS, Javascript, Jquery, NodeJS, React, Github, Heroku\",\n            \"description\": \"Full-stack application development using React, React Router, and NodeJS.\",\n            \"links\": {\n                \"repository\": \"https://github.com/GrimonprezAlexis/P11_kasa\",\n                \"maquette\": \"https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR?node-id=4%3A1\"\n            }\n        },\n        {\n            \"_id\": \"64d805e9f0844e9ab060eba9\",\n            \"title\": \"Projet 12 - SportSee\",\n            \"subtitle\": \"Application Web pour le suivi sportif\",\n            \"technologies\": \"React, React Router, styled-components, axios, Recharts, Sass, prop-types\",\n            \"description\": \"Build a sports tracking web application using React and various libraries.\",\n            \"links\": {\n                \"repository\": \"https://github.com/GrimonprezAlexis/P12_SportSee\",\n                \"app_link\": \"https://p12-sportsee-eta.vercel.app/\"\n            }\n        },\n        {\n            \"_id\": \"64da5cded7669b298e23f3ce\",\n            \"title\": \"Projet 15 - Angular Webfolio\",\n            \"subtitle\": \"Portfolio - Responsive website with API NodeJS Backend\",\n            \"technologies\": \"NodeJS, MongoDB, Github\",\n            \"description\": \"Responsive website based on a provided design.\",\n            \"links\": {\n                \"repository\": \"https://github.com/GrimonprezAlexis/GrimonprezAlexis_2_06022021\",\n                \"maquette\": \"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P2+HTML+%26+CSS/Projet+2+-+Reservia+FR.zip\"\n            },\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"64da5d7e97399b61b6991397\",\n            \"title\": \"Projet 15 - Angular Webfolio\",\n            \"subtitle\": \"Portfolio - Responsive website with API NodeJS Backend\",\n            \"technologies\": \"NodeJS, MongoDB, Github\",\n            \"description\": \"Responsive website based on a provided design.\",\n            \"links\": {\n                \"repository\": \"https://github.com/GrimonprezAlexis/GrimonprezAlexis_2_06022021\",\n                \"maquette\": \"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P2+HTML+%26+CSS/Projet+2+-+Reservia+FR.zip\"\n            },\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"64da5f969db5922b013dd22b\",\n            \"title\": \"Projet 19 - Angular Webfolio\",\n            \"subtitle\": \"Portfolio - Responsive website with API NodeJS Backend\",\n            \"technologies\": \"NodeJS, MongoDB, Github\",\n            \"description\": \"Responsive website based on a provided design.\",\n            \"links\": {\n                \"repository\": \"https://github.com/GrimonprezAlexis/GrimonprezAlexis_2_06022021\",\n                \"maquette\": \"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P2+HTML+%26+CSS/Projet+2+-+Reservia+FR.zip\"\n            },\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"64da6438e83581c27181eb5a\",\n            \"title\": \"Projet 16 - Angular Webfolio\",\n            \"subtitle\": \"Portfolio - Responsive website with API NodeJS Backend\",\n            \"technologies\": \"NodeJS, MongoDB, Github\",\n            \"description\": \"Responsive website based on a provided design.\",\n            \"links\": {\n                \"repository\": \"https://github.com/GrimonprezAlexis/GrimonprezAlexis_2_06022021\",\n                \"maquette\": \"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P2+HTML+%26+CSS/Projet+2+-+Reservia+FR.zip\"\n            },\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Project by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/projects/{{project_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"projects",
+						"{{project_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Project by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/projects/{{project_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"projects",
+								"{{project_id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "531"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"213-EsYKF6y9+PSQLxMOuGS+LpZacyw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Aug 2023 17:29:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"_id\": \"64d805e9f0844e9ab060eba2\",\n        \"title\": \"Projet 2 - Transformez une maquette en site web\",\n        \"subtitle\": \"Réservia - Outil de planification de vacances\",\n        \"technologies\": \"HTML, CSS, Font Awesome, Github\",\n        \"description\": \"Responsive website based on a provided design.\",\n        \"links\": {\n            \"repository\": \"https://github.com/GrimonprezAlexis/GrimonprezAlexis_2_06022021\",\n            \"maquette\": \"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P2+HTML+%26+CSS/Projet+2+-+Reservia+FR.zip\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Projet 16 - Angular Webfolio\",\n    \"subtitle\": \"Portfolio - Responsive website with API NodeJS Backend\",\n    \"technologies\": \"NodeJS, MongoDB, Github\",\n    \"description\": \"Responsive website based on a provided design.\",\n    \"links\": {\n        \"repository\": \"https://github.com/GrimonprezAlexis/GrimonprezAlexis_2_06022021\",\n        \"maquette\": \"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P2+HTML+%26+CSS/Projet+2+-+Reservia+FR.zip\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"projects"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Project",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Projet 16 - Angular Webfolio\",\n    \"subtitle\": \"Portfolio - Responsive website with API NodeJS Backend\",\n    \"technologies\": \"NodeJS, MongoDB, Github\",\n    \"description\": \"Responsive website based on a provided design.\",\n    \"links\": {\n        \"repository\": \"https://github.com/GrimonprezAlexis/GrimonprezAlexis_2_06022021\",\n        \"maquette\": \"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P2+HTML+%26+CSS/Projet+2+-+Reservia+FR.zip\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"projects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "70"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"46-RmsNXsy3UTN/aMnnrgD49GJhS/g\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Aug 2023 17:28:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": \"64da6438e83581c27181eb5a\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Project",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Projet 19 - Angular Webfolio\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/projects/64da5f969db5922b013dd22b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"projects",
+						"64da5f969db5922b013dd22b"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Project",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Projet 19 - Angular Webfolio\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/projects/64da5f969db5922b013dd22b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"projects",
+								"64da5f969db5922b013dd22b"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "70"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"46-uwuHtN4Y8HikIBTQCJQsmHL6m+A\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Aug 2023 17:28:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": \"64da5f969db5922b013dd22b\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/projects/64da5dcd8abcc148dbc38d02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"projects",
+						"64da5dcd8abcc148dbc38d02"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Project",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/projects/64da5dcd8abcc148dbc38d02",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"projects",
+								"64da5dcd8abcc148dbc38d02"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "476"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1dc-K6W8l1eD5hadDQYzqjufuWrRII8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Aug 2023 17:06:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"64da5dcd8abcc148dbc38d02\",\n    \"title\": \"Projet 16 - Angular Webfolio\",\n    \"subtitle\": \"Portfolio - Responsive website with API NodeJS Backend\",\n    \"technologies\": \"NodeJS, MongoDB, Github\",\n    \"description\": \"Responsive website based on a provided design.\",\n    \"links\": {\n        \"repository\": \"https://github.com/GrimonprezAlexis/GrimonprezAlexis_2_06022021\",\n        \"maquette\": \"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P2+HTML+%26+CSS/Projet+2+-+Reservia+FR.zip\"\n    },\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "`v1/health/check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/health/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"health",
+						"check"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "`v1/health/check",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/health/check",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"health",
+								"check"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-RBUq30SqTLMnjpBmmmkGkSvDfK8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Aug 2023 17:31:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"portfolio-node-express-mongodb\",\n    \"version\": \"1.0.0\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "project_id",
+			"value": "64d805e9f0844e9ab060eba2"
+		}
+	]
+}
