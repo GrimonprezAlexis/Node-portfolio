@@ -5,7 +5,7 @@ const { ProjectsService } = require('./projects.service');
 
 module.exports = (router) => {
     router.get('/health/check', (req, res, next) => {
-        res.send(_.pick(require('../package.json'), ['name', 'version']))
+        res.send(_.pick(require('./package.json'), ['name', 'version']))
     });
 
     router.get('/projects', async (req, res, next) => {    
