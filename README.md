@@ -5,14 +5,10 @@ npm install express mongoose cors --save
 package.json
 README.md
 node_modules
+.env
 > app
-    > server.js
-    > router.js
-    > helpers
-    > models
-    > services
-> config
+    server.js
+    router.js
     config.js
-> middleware
     logger.js
 > postman

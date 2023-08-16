@@ -36,8 +36,6 @@ mongoose.connect(config.mongoURI, {
 });
 
 const db = mongoose.connection;
-
-
 db.on('error', CommonService.handleDBError);
 
 db.once('open', () => {
