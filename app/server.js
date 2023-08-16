@@ -1,10 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const CommonService = require('./app/helpers/common.service');
+const CommonService = require('./helpers/common.service');
 
 require('dotenv').config();
-const config = require('./config/config');
+const config = require('../config/config');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -24,7 +24,7 @@ app.use(cors({
 }));
 
 // Middleware for logging
-app.use(require('./middleware/logger'));
+app.use(require('../middleware/logger'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -43,7 +43,7 @@ db.once('open', () => {
     console.log('Connected to MongoDB');
 
     // Define API routes
-    app.use('/v1', require('./app/routes/v1/router'));
+    app.use('/v1', require('./routes/v1/router'));
 
     // Start the server after connecting to DB
     app.listen(port, () => console.log(`Server is running on port ${port}`));

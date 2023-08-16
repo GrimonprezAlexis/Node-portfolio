@@ -2,11 +2,11 @@
 npm install express mongoose cors --save
 
 # Node-portfolio
-server.json
 package.json
 README.md
 node_modules
 > app
+    > server.js
     > helpers
     > models
     > routes
