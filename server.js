@@ -1,17 +1,14 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const CommonService = require('./common.service');
-
 require('dotenv').config();
-const config = require('./config');
 
+const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
-app.use(require('./logger'));
 
+app.use(require('./logger'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Set up CORS headers
+const cors = require('cors');
 app.use(cors({
     origin: function(origin, callback) {
         const allowOrigin = [
@@ -20,35 +17,38 @@ app.use(cors({
             'https://www.alexgrz.vercel.app',
             'https://alexgrz.vercel.app',
         ];
-        const originIsAllowOrigined = allowOrigin.indexOf(origin) !== -1;
-        callback(null, originIsAllowOrigined);
+        if(allowOrigin.indexOf(origin) !== -1) {
+            return callback(null, originIsAllowOrigined);
+        } else {
+            console.log("CORS error");
+            let err = new Error('Not allowed by CORS')
+            .status(405);
+            next(err);
+        };
     },
     credentials: true
 }));
 
-// Middleware for logging
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
 // Connect to MongoDB using mongoose
+const mongoose = require('mongoose');
+const config = require('./config');
+const port = process.env.PORT || 3000;
 mongoose.connect(`${config.mongoURI}?tls=true&tlsInsecure=true`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
-db.on('error', CommonService.handleDBError);
+const router = express.Router({mergeParams: true});
+const apiRouter = require('./router')(router);
 
 db.once('open', () => {
     console.log('Connected to MongoDB');
-
-    const router = express.Router({mergeParams: true});
-    const apiRouter = require('./router')(router);
     app.use('/v1', apiRouter);
-
-    // Start the server after connecting to DB
     app.listen(port, () => console.log(`Server is running on port ${port}`));
 });
 
+const CommonService = require('./common.service');
+db.on('error', CommonService.handleDBError);
 
 module.exports = app;
