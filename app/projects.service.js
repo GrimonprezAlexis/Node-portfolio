@@ -1,7 +1,7 @@
 'use strict';
 const mongoose = require('mongoose');
-const Project = require('../models/projects');
-const CommonService = require('../helpers/common.service');
+const Project = require('./projects');
+const CommonService = require('./common.service');
 
 module.exports.ProjectsService = class ProjectsService {
 
