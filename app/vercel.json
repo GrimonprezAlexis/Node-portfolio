@@ -2,22 +2,12 @@
     "version": 2,
     "builds": [
       {
-        "src": "app/server.js",
+        "src": "app/*.js",
         "use": "@vercel/node"
       }
     ],
-    "routes": [
-      {
-        "src": "/v1/health/check",
-        "dest": "/app/routes/v1/health/router.js"
-      },
-      {
-        "src": "/v1/projects/(.*)",
-        "dest": "/app/routes/v1/projects/router.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/app/server.js"
-      }
-    ]
+    "routes": [{
+      "src": "/(.*)",
+      "dest": "app/*.js"
+  }]
 }  
