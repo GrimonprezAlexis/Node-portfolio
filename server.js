@@ -17,7 +17,8 @@ app.use(cors({
         const allowOrigin = [
             'http://localhost:4200',
             'http://www.alexgrz.vercel.app',
-            'https://www.alexgrz.vercel.app'
+            'https://www.alexgrz.vercel.app',
+            'https://alexgrz.vercel.app',
         ];
         const originIsAllowOrigined = allowOrigin.indexOf(origin) !== -1;
         callback(null, originIsAllowOrigined);
