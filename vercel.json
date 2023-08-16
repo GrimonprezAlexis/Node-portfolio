@@ -8,14 +8,6 @@
   ],
   "routes": [
     {
-      "src": "/v1/health/check",
-      "dest": "/server.js"
-    },
-    {
-      "src": "/v1/projects/(.*)",
-      "dest": "/server.js"
-    },
-    {
       "src": "/v1/(.*)",
       "dest": "/server.js"
     },
