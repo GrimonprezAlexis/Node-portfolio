@@ -30,9 +30,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Connect to MongoDB using mongoose
-mongoose.connect(config.mongoURI, {
+mongoose.connect(`${config.mongoURI}?tls=true&tlsInsecure=true`, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
