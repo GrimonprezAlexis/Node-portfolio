@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const CommonService = require('./app/helpers/common.service');
 
+require('dotenv').config();
+const config = require('./config/config');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -26,9 +29,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Connect to MongoDB using mongoose
-mongoose.connect('mongodb://localhost:27017/portfolio', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+mongoose.connect(config.mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
 const db = mongoose.connection;
