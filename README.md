@@ -10,6 +10,12 @@ node_modules
     > helpers
     > models
     > routes
+        > v1
+            router.js
+            > health
+                router.js
+            > projects
+                router.js
     > services
 > config
     config.js
