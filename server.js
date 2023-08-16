@@ -48,7 +48,8 @@ db.once('open', () => {
     app.listen(port, () => console.log(`Server is running on port ${port}`));
 });
 
-const CommonService = require('./common.service');
-db.on('error', CommonService.handleDBError);
+db.on('error', (err) => {
+    console.error('MongoDB connection error:', err);
+});
 
 module.exports = app;
