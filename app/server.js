@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const CommonService = require('./helpers/common.service');
 
+const v1HealthRouter = require('./routes/v1/health/router');
+const v1ProjectsRouter = require('./routes/v1/projects/router');
+
 require('dotenv').config();
 const config = require('../config/config');
 
@@ -42,8 +45,8 @@ db.on('error', CommonService.handleDBError);
 db.once('open', () => {
     console.log('Connected to MongoDB');
 
-    // Define API routes
-    app.use('/v1', require('./routes/v1/router'));
+    app.use('/v1/health', v1HealthRouter);
+    app.use('/v1/projects', v1ProjectsRouter);
 
     // Start the server after connecting to DB
     app.listen(port, () => console.log(`Server is running on port ${port}`));
