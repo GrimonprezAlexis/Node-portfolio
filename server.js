@@ -1,13 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const CommonService = require('./helpers/common.service');
+const CommonService = require('./app/helpers/common.service');
 
 require('dotenv').config();
-const config = require('../config/config');
+const config = require('./config/config');
 
 const app = express();
 const port = process.env.PORT || 3000;
+app.use(require('./middleware/logger'));
+
 
 // Set up CORS headers
 app.use(cors({
@@ -24,7 +26,6 @@ app.use(cors({
 }));
 
 // Middleware for logging
-app.use(require('../middleware/logger'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

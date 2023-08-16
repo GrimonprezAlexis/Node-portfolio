@@ -1,11 +1,11 @@
 'use strict';
 const _ = require('lodash');
-const CommonService = require('./helpers/common.service');
-const { ProjectsService } = require('./services/projects.service');
+const CommonService = require('./app/helpers/common.service');
+const { ProjectsService } = require('./app/services/projects.service');
 
 module.exports = (router) => {
     router.get('/health/check', (req, res, next) => {
-        res.send(_.pick(require('../package.json'), ['name', 'version']))
+        res.send(_.pick(require('./package.json'), ['name', 'version']))
     });
 
     router.get('/projects', async (req, res, next) => {    
