@@ -18,7 +18,7 @@ app.use(cors({
             'https://alexgrz.vercel.app',
         ];
         if(allowOrigin.indexOf(origin) !== -1) {
-            return callback(null, originIsAllowOrigined);
+            return callback(null, true);
         } else {
             console.log("CORS error");
             let err = new Error('Not allowed by CORS')
