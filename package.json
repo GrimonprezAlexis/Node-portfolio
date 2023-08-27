@@ -2,9 +2,9 @@
   "name": "portfolio-node-express-mongodb",
   "version": "1.0.0",
   "description": "Node.js Restful CRUD API with Node.js, Express and MongoDB",
-  "main": "app/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app/server.js",
+    "start": "node server.js",
     "watch": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
