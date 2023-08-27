@@ -22,10 +22,8 @@ module.exports = (router) => {
     });
     
     router.get('/projects/:projectId', (req, res, next) => {
-      CommonService.executeAndSendResult(async () => {
-        return await new ProjectsService().getProjectById(req, res);
-      }, res, next);
-    });
+      CommonService.executeAndSendResult(() => new ProjectsService().getProjectById(req, res), res, next);
+    });  
     
     router.post('/projects', (req, res, next) => {
       CommonService.executeAndSendResult(async () => {
@@ -34,9 +32,7 @@ module.exports = (router) => {
     });
     
     router.patch('/projects/:projectId', (req, res, next) => {
-      CommonService.executeAndSendResult(async () => {
-        return await new ProjectsService().updateProject(req, res);
-      }, res, next);
+      CommonService.executeAndSendResult(() => new ProjectsService().updateProject(req, res), res, next);
     });
     
     router.delete('/projects/:projectId', (req, res, next) => {

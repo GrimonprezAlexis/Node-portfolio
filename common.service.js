@@ -1,12 +1,12 @@
 const _ = require('lodash');
 
 module.exports.executeAndSendResult = async function (func, res, next) {
-    try {
-      const result = await func();
+  try {
+      const result = await func(); // You can keep this await here since func is now an async function
       return result;
-    } catch (e) {
+  } catch (e) {
       next(e);
-    }
+  }
 };
  
 // Handle MongoDB connection errors

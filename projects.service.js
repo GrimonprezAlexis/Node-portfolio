@@ -7,17 +7,17 @@ module.exports.ProjectsService = class ProjectsService {
 
     async getAllProjects(res) {
         try {
-            const projects = await Project.find();
+            const projects = await Project.find().exec();
             CommonService.sendSuccessResponse(res, projects);
         } catch (error) {
             CommonService.handleError(res, error, 'Error fetching projects');
         }
     }
-
+     
     async getProjectById(req, res) {
         const projectId = req.params.projectId;
         try {
-            const project = await Project.findById(projectId);
+            const project = await Project.findById(projectId).exec();
             if (!project) {
                 CommonService.handleNotFoundError(res, `No project found with id ${projectId}`);
             } else {
@@ -46,20 +46,20 @@ module.exports.ProjectsService = class ProjectsService {
     async updateProject(req, res) {
         const projectId = req.params.projectId;
         const projectData = req.body;
-
+    
         try {
             const updatedProject = await Project.findByIdAndUpdate(
-                { _id: new mongoose.Types.ObjectId(projectId) },
+                projectId,
                 projectData,
                 { new: true }
-            );
-
+            ).exec();
+    
             if (!updatedProject) {
                 CommonService.handleNotFoundError(res, `No project found with id ${projectId}`);
             } else {
                 CommonService.sendSuccessResponse(res, updatedProject._id);
             }
-
+    
         } catch (error) {
             CommonService.handleError(res, error, 'Error updating project');
         }
