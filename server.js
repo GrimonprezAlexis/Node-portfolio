@@ -19,6 +19,7 @@ app.use(cors({
 const mongoose = require(`mongoose`);
 const config = require(`./config`);
 const port = process.env.PORT || 3000;
+
 mongoose.connect(`${config.mongoURI}?tls=true&tlsInsecure=true`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
