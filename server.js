@@ -3,31 +3,38 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 
-app.use(require('./logger'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
 // Set up CORS headers
 const cors = require('cors');
 app.use(cors({
     origin: function(origin, callback) {
-        const allowOrigin = [
+        const allowedOrigins = [
             'http://localhost:4200',
             'http://www.alexgrz.vercel.app',
             'https://www.alexgrz.vercel.app',
             'https://alexgrz.vercel.app',
         ];
-        if(allowOrigin.indexOf(origin) !== -1) {
-            return callback(null, true);
+        
+        // Affichez l'origine pour déboguer
+        console.log("Received origin:", origin);
+        
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
         } else {
-            console.log("CORS error");
-            let err = new Error('Not allowed by CORS')
-            .status(405);
-            next(err);
-        };
+            callback(new Error(`${origin} not allowed by CORS`));
+        }
     },
     credentials: true
 }));
+
+app.use(require('./logger'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
+// app.use(cors({
+//     origin: '*',
+//     credentials: true
+// }));
 
 // Connect to MongoDB using mongoose
 const mongoose = require('mongoose');
