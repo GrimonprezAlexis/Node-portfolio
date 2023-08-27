@@ -9,26 +9,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Set up CORS headers
 const cors = require(`cors`);
-const allowedOrigins = [
-    `http://localhost:3000`,    // Corrected typo here
-    `http://localhost:4200`,
-    `http://www.alexgrz.vercel.app`,
-    `https://www.alexgrz.vercel.app`,
-    `https://alexgrz.vercel.app`,
-];
-
-const corsOptions = {
-    origin: (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error(`${origin} not allowed by CORS`));
-        }
-    },
+app.use(cors({
+    origin: '*',
     credentials: true
-};
-
-app.use(cors(corsOptions));
+}));
 
 
 // Connect to MongoDB using mongoose
